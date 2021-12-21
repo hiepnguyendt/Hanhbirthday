@@ -1,19 +1,7 @@
-
-.todo-list{
+.course-goals h2 {
   text-align: center;
+  color: orange;
 }
-.todo-list h2 {
-  text-align: center;
-  color: aqua;
-}
-.todo-list h3{
-  color: rgb(253, 253, 252);
-  margin-left: 1rem;
-}
- 
-.todo-list p{
-  text-align: center;
-  color: aliceblue;
-  margin-left: 2rem;
-  margin-right: 2rem;
+.course-goals {
+color: orange;
 }

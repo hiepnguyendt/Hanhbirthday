@@ -1,29 +1,28 @@
 import React, { useState } from 'react';
 
-import TodoList from './components/Todo-list/TodoList';
-import LabSubmit from './components/Lab-submit/LabSubmit';
-
+import GoalList from './components/GoalList/GoalList';
+import NewGoal from './components/NewGoal/NewGoal';
 import './App.css';
 
+
 const App = () => {
-  const [todolist, setLabSubmit]= useState([
-    {id: 'w1', text: 'Tạo mới Tài khoản AWS'},
-    {id: 'w2', text: 'Quản lý mức chi phí sử dụng trên AWS với AWS Budgets'},
-    {id: 'w3', text: 'Quản lý mức chi phí sử dụng trên AWS với AWS Budgets'},
-    {id: 'w4', text: 'Quản lý mức chi phí sử dụng trên AWS với AWS Budgets'}
+  const [courseGoals, setCourseGoals] = useState([
+    { id: 'g1', text: 'AWS Certified Cloud Practitioner' },
+    { id: 'g2', text: 'AWS Certified Solutions Architect - Associate' },
   ]);
-   
-  const addLab = newLabSubmit => {
-    setLabSubmit(prevLabSubmit => prevLabSubmit.concat(newLabSubmit))
+
+  const addNewGoalHandler = newGoal => {
+    setCourseGoals(prevCourseGoals => prevCourseGoals.concat(newGoal));
   };
-  
+
   return (
-    <div className="todo-list">
-      <h2>Submit Lab</h2>
-      <TodoList todo={todolist} />
-      <LabSubmit onAddLab={addLab} />
+    <div className="course-goals">
+      <h2>My Goals</h2>
+      <GoalList goals={courseGoals} />
+      <NewGoal onAddGoal={addNewGoalHandler} />
     </div>
   );
+  
 };
 
 export default App;
