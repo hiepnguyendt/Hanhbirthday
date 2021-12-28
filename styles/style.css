@@ -35,10 +35,11 @@ li span {
 }
 .merrywrap {
   position: absolute;
-  right: 40px;
-  left: 40px;
-  bottom: 80px;
-  top: 40px;
+
+  right: 0px;
+  left: 00px;
+  bottom: 0px;
+  top: 0px;
 }
 .giftbox {
   position: absolute;
